@@ -49,19 +49,20 @@ double const R = 83.14; ///< universal gas constant definition
 	int n=Tvap.size()-1;
 		
 /// Van der Waals Vapor Pressure Calculation.
-	PvapVdW=pvapvdw.Pvap_Calc(n, Pc, Tc, R, P, Tmin);
+	pvapvdw = new CPvapVdW(Tc, Pc);
+	PvapVdW=pvapvdw->Pvap_Calc(n, Pc, Tc, R, P, Tmin);
 
 /// Redlich-Kwong Vapor Pressure Calculation.
-	PvapRK=pvaprk.Pvap_Calc(n, Pc, Tc, R, P, Tmin);
+	//PvapRK=pvaprk.Pvap_Calc(n, Pc, Tc, R, P, Tmin);
 	
 /// Soave-Redlich-Kwong Vapor Pressure Calculation.
-	PvapSoave=pvapsoave.Pvap_Calc(n, Pc, Tc, w, R, P, Tmin);
+//	PvapSoave=pvapsoave.Pvap_Calc(n, Pc, Tc, w, R, P, Tmin);
 
 /// Peng-Robinson Vapor Pressure Calculation.
-	PvapPR = pvappr.Pvap_Calc(n, Pc, Tc, w, R, P, Tmin);
+//	PvapPR = pvappr.Pvap_Calc(n, Pc, Tc, w, R, P, Tmin);
 
 /// Schmidt-Wenzel Vapor Pressure Calculation.
-	PvapSW = pvapsw.Pvap_Calc(n, Pc, Tc, w, R, P, Tmin);
+//	PvapSW = pvapsw.Pvap_Calc(n, Pc, Tc, w, R, P, Tmin);
 
 if (enter==1)
 {
@@ -86,26 +87,27 @@ if (enter==1)
 if (enter==0)
 {
 /// Pvap Experimental values defintion.
-	cout<<"\n"<<line<<"Enter with exp. Temperature file's name: ";
-	string Texp;
-	getline(cin, Texp);
-	string path;
-	path = "..\\compostos\\" + Texp;
-	ifstream Tin (path.c_str ());
-	Tin>>Tvapexp;
+//	cout<<"\n"<<line<<"Enter with exp. Temperature file's name: ";
+//	string Texp;
+//	getline(cin, Texp);
+//	string path;
+//	path = "..\\compostos\\" + Texp;
+//	ifstream Tin (path.c_str ());
+//	Tin>>Tvapexp;
 	
-	cout<<"\n"<<line<<"Enter with exp. Pressure file's name: ";
-	string Pexp;
-	getline(cin, Pexp);
-	path = "..\\compostos\\" + Pexp;
-	ifstream Pin (path.c_str ());
-	Pin>>Pvapexp;
+//	cout<<"\n"<<line<<"Enter with exp. Pressure file's name: ";
+//	string Pexp;
+//	getline(cin, Pexp);
+//	path = "..\\compostos\\" + Pexp;
+//	ifstream Pin (path.c_str ());
+//	Pin>>Pvapexp;
 	
 	int n_exp = Tvapexp.size()-1;
 /// Plot Results.
 	cout<<line;
-	data.Plotcalc(n, Tvap,PvapVdW,PvapRK,PvapSoave,PvapPR,PvapSW);
-	data.Plotexp(n_exp, Tvapexp, Pvapexp);
+	data.Plotcalc(n, Tvap, PvapVdW, "Van der Waals Pvap");
+	//data.Plotcalc(n, Tvap,PvapVdW,PvapRK,PvapSoave,PvapPR,PvapSW);
+	//data.Plotexp(n_exp, Tvapexp, Pvapexp);
 	
 /// Vapor Pressure Output.
 	cout<<line;

@@ -17,8 +17,9 @@ protected:
 	CFugVdW fugVdW; ///< Object for calculation of the phase fugacity
 	CNewtonMet solver; ///< Object for solving 3rd degree equation 
 	
-	double a; ///< parameter "a"
-	double b; ///< parameter "b" 
+	double R;
+	//double a; ///< parameter "a"
+	//double b; ///< parameter "b" 
 	double A; ///< parameter "A" 
 	double B; ///< parameter "B" 
 	double alpha; ///< parameter "alpha" 
@@ -38,11 +39,14 @@ protected:
 	
 public:
 	std::vector<double> Pvap_Calc(int n, double Pc, double Tc, double const R, double P, double T); ///< method for pvap estimation
+	std::vector<double> Pvap_Calc(int n, double Pc, double Tc, double P, double T); ///< method for pvap estimation
 	double Get_Pvap() {return Pvap;}; ///< return pvap
 
 /// Class Constructor.
 	CPvapVdW()
-	{cont=0;maxiter=100;control=1.0;a=0;b=0;A=0;B=0;alpha=0;beta=0;gamma=0;ig=0;zl=0;zv=0;fv=0;fl=0;Pvap=0;};
+	{cont=0;maxiter=100;control=1.0;A=0;B=0;alpha=0;beta=0;gamma=0;ig=0;zl=0;zv=0;fv=0;fl=0;Pvap=0; R=83.14;};
+	
+	CPvapVdW(double Tc, double Pc);
 
 /// Class Destructor.	
 	~CPvapVdW(){};

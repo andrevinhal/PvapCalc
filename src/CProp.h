@@ -37,6 +37,7 @@ class CProp
 	
 	///Method to plot calculates vapor pressure.
 	void Plotcalc(int &_n, std::vector <double> &_Tvap, std::vector <double> &_PvapVdW, std::vector <double> &_PvapRK, std::vector <double> &_PvapSoave, std::vector <double> &_PvapPR, std::vector <double> &_PvapSW);
+	void Plotcalc(int &_n, std::vector <double> &_Tvap, std::vector <double> &pressure_data, std::string tag);
 	
 	///Method to plot experimental vapor pressure.
 	void Plotexp(int &_n, std::vector <double> &_Tvapexp, std::vector <double> &_Pvapexp);
@@ -60,7 +61,14 @@ class CProp
 	double Get_DataTmax(){return this->Tmax;};	///< Get systems max temperature
 	
 /// Class constructor.
-	CProp(){Tc=0;Pc=100;w=0;Tmin=0;Tmax=0;};
+	CProp(){
+	Tc=0;Pc=100;w=0;Tmin=0;Tmax=0;
+	plot.set_style("linespoints");
+    plot.set_xlabel("Temperature (K)");
+    plot.set_ylabel("Pressure (bar)");
+    plot.set_pointsize(1.2);
+    plot.set_title("Vapor Pressure vs. Temperature");
+	};
 	
 /// Class destructor.
 	~CProp(){};

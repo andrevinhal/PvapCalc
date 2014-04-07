@@ -32,7 +32,7 @@ private:
 	double maxerrsw; ///< Max. SW relative error
 	int print; ///< Print data
 	
-	CPvapVdW pvapvdw; ///< van der Waals Pvap object
+	CPvapVdW *pvapvdw; ///< van der Waals Pvap object
 	CPvapRK	pvaprk; ///< Redlich-Kwong Pvap object
 	CPvapSoave pvapsoave; ///< Soave Pvap object
 	CPvapPR pvappr; ///< Peng-Robinson Pvap object

@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o CEosVdW.o CEosRK.o CFugVdW.o CFugRK.o CEosSoave.o CFugSoave.o CEosPR.o CFugPR.o CGnuplot.o CPvapVdW.o CPvapRK.o CPvapSoave.o CPvapPR.o CPerr.o CNewtonMet.o CProp.o CSimulatorPvap.o CEosSW.o CFugSW.o CPvapSW.o
-LINKOBJ  = main.o CEosVdW.o CEosRK.o CFugVdW.o CFugRK.o CEosSoave.o CFugSoave.o CEosPR.o CFugPR.o CGnuplot.o CPvapVdW.o CPvapRK.o CPvapSoave.o CPvapPR.o CPerr.o CNewtonMet.o CProp.o CSimulatorPvap.o CEosSW.o CFugSW.o CPvapSW.o
+OBJ      = main.o CEosVdW.o CEosRK.o CFugVdW.o CFugRK.o CEosSoave.o CFugSoave.o CEosPR.o CFugPR.o CGnuplot.o CPvapVdW.o CPvapRK.o CPvapSoave.o CPvapPR.o CPerr.o CNewtonMet.o CProp.o CSimulatorPvap.o CEosSW.o CFugSW.o CPvapSW.o VanderWaals.o
+LINKOBJ  = main.o CEosVdW.o CEosRK.o CFugVdW.o CFugRK.o CEosSoave.o CFugSoave.o CEosPR.o CFugPR.o CGnuplot.o CPvapVdW.o CPvapRK.o CPvapSoave.o CPvapPR.o CPerr.o CNewtonMet.o CProp.o CSimulatorPvap.o CEosSW.o CFugSW.o CPvapSW.o VanderWaals.o
 LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -std=c++11 -Wall -g3
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++"
@@ -86,3 +86,6 @@ CFugSW.o: CFugSW.cpp
 
 CPvapSW.o: CPvapSW.cpp
 	$(CPP) -c CPvapSW.cpp -o CPvapSW.o $(CXXFLAGS)
+
+VanderWaals.o: VanderWaals.cpp
+	$(CPP) -c VanderWaals.cpp -o VanderWaals.o $(CXXFLAGS)

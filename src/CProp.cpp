@@ -222,6 +222,25 @@ void CProp::Plotcalc(int &_n,
 
 }
 
+///Plot Calculated Vapor Pressure
+void CProp::Plotcalc(int &_n, vector <double> &_Tvap,	vector <double> &pressure_data, string tag)
+				
+{
+		for (int i=0; i<=_n; i++)
+		{ double T = log(1/_Tvap[i]);
+		Tplot.push_back(T);
+    	}
+	
+	
+   
+    plot.plot_xy(Tplot, pressure_data , tag);
+    //plot.plot_xy(Tplot, _PvapRK,  "Redlich-Kwong Pvap");
+    //plot.plot_xy(Tplot, _PvapSoave, "Soave Pvap");
+    //plot.plot_xy(Tplot, _PvapPR, "Peng-Robinson Pvap");
+	//plot.plot_xy(Tplot, _PvapSW, "Schimidt-Wenzel Pvap");
+
+}
+
 ///Plot Experimental Vapor Pressure
 
 void CProp::Plotexp(int &_n, 
