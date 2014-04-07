@@ -1,0 +1,7 @@
+#Fluid Properties: Methane
+190.4 #Critical Pressure
+46.0 #Critical Temperature
+0.011 #Acentric Factor
+#System Properties
+120 #Min. Temperature
+160 #Max. Temperature

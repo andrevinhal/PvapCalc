@@ -1,0 +1,88 @@
+# Project: Psat
+# Makefile created by Dev-C++ 5.5.3
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o CEosVdW.o CEosRK.o CFugVdW.o CFugRK.o CEosSoave.o CFugSoave.o CEosPR.o CFugPR.o CGnuplot.o CPvapVdW.o CPvapRK.o CPvapSoave.o CPvapPR.o CPerr.o CNewtonMet.o CProp.o CSimulatorPvap.o CEosSW.o CFugSW.o CPvapSW.o
+LINKOBJ  = main.o CEosVdW.o CEosRK.o CFugVdW.o CFugRK.o CEosSoave.o CFugSoave.o CEosPR.o CFugPR.o CGnuplot.o CPvapVdW.o CPvapRK.o CPvapSoave.o CPvapPR.o CPerr.o CNewtonMet.o CProp.o CSimulatorPvap.o CEosSW.o CFugSW.o CPvapSW.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -std=c++11 -Wall -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++"
+BIN      = Pvap.exe
+CXXFLAGS = $(CXXINCS) -g3 -std=c++11
+CFLAGS   = $(INCS) -g3 -std=c++11
+RM       = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+CEosVdW.o: CEosVdW.cpp
+	$(CPP) -c CEosVdW.cpp -o CEosVdW.o $(CXXFLAGS)
+
+CEosRK.o: CEosRK.cpp
+	$(CPP) -c CEosRK.cpp -o CEosRK.o $(CXXFLAGS)
+
+CFugVdW.o: CFugVdW.cpp
+	$(CPP) -c CFugVdW.cpp -o CFugVdW.o $(CXXFLAGS)
+
+CFugRK.o: CFugRK.cpp
+	$(CPP) -c CFugRK.cpp -o CFugRK.o $(CXXFLAGS)
+
+CEosSoave.o: CEosSoave.cpp
+	$(CPP) -c CEosSoave.cpp -o CEosSoave.o $(CXXFLAGS)
+
+CFugSoave.o: CFugSoave.cpp
+	$(CPP) -c CFugSoave.cpp -o CFugSoave.o $(CXXFLAGS)
+
+CEosPR.o: CEosPR.cpp
+	$(CPP) -c CEosPR.cpp -o CEosPR.o $(CXXFLAGS)
+
+CFugPR.o: CFugPR.cpp
+	$(CPP) -c CFugPR.cpp -o CFugPR.o $(CXXFLAGS)
+
+CGnuplot.o: CGnuplot.cpp
+	$(CPP) -c CGnuplot.cpp -o CGnuplot.o $(CXXFLAGS)
+
+CPvapVdW.o: CPvapVdW.cpp
+	$(CPP) -c CPvapVdW.cpp -o CPvapVdW.o $(CXXFLAGS)
+
+CPvapRK.o: CPvapRK.cpp
+	$(CPP) -c CPvapRK.cpp -o CPvapRK.o $(CXXFLAGS)
+
+CPvapSoave.o: CPvapSoave.cpp
+	$(CPP) -c CPvapSoave.cpp -o CPvapSoave.o $(CXXFLAGS)
+
+CPvapPR.o: CPvapPR.cpp
+	$(CPP) -c CPvapPR.cpp -o CPvapPR.o $(CXXFLAGS)
+
+CPerr.o: CPerr.cpp
+	$(CPP) -c CPerr.cpp -o CPerr.o $(CXXFLAGS)
+
+CNewtonMet.o: CNewtonMet.cpp
+	$(CPP) -c CNewtonMet.cpp -o CNewtonMet.o $(CXXFLAGS)
+
+CProp.o: CProp.cpp
+	$(CPP) -c CProp.cpp -o CProp.o $(CXXFLAGS)
+
+CSimulatorPvap.o: CSimulatorPvap.cpp
+	$(CPP) -c CSimulatorPvap.cpp -o CSimulatorPvap.o $(CXXFLAGS)
+
+CEosSW.o: CEosSW.cpp
+	$(CPP) -c CEosSW.cpp -o CEosSW.o $(CXXFLAGS)
+
+CFugSW.o: CFugSW.cpp
+	$(CPP) -c CFugSW.cpp -o CFugSW.o $(CXXFLAGS)
+
+CPvapSW.o: CPvapSW.cpp
+	$(CPP) -c CPvapSW.cpp -o CPvapSW.o $(CXXFLAGS)

@@ -1,0 +1,7 @@
+#Fluid Properties: Propane
+369.8 #Critical Pressure
+42.5 #Critical Temperature
+0.153 #Acentric Factor
+#System Properties
+273 #Min. Temperature
+320 #Max. Temperature

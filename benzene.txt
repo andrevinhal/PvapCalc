@@ -1,0 +1,7 @@
+#Fluid Properties: Benzene
+562.1 #Critical Pressure
+48.9 #Critical Temperature
+0.212 #Acentric Factor
+#System Properties
+280 #Min. Temperature
+350 #Max. Temperature

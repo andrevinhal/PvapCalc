@@ -1,0 +1,7 @@
+#Fluid Properties: Water
+647.3 #Critical Pressure
+221.2 #Critical Temperature
+0.344 #Acentric Factor
+#System Properties
+273 #Min. Temperature
+373 #Max. Temperature
