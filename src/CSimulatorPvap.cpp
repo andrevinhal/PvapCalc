@@ -27,7 +27,9 @@ double const R = 83.14; ///< universal gas constant definition
 			{cout<<"Enter with file's name: ";
 			string fp;
 			getline(cin, fp);
-			ifstream fin (fp.c_str ());
+			string path;
+			path = "..\\compostos\\" + fp;
+			ifstream fin (path.c_str ());
 			fin>>data;
 			cout<<line;
 			cout<<data;}
@@ -58,7 +60,7 @@ double const R = 83.14; ///< universal gas constant definition
 /// Peng-Robinson Vapor Pressure Calculation.
 	PvapPR = pvappr.Pvap_Calc(n, Pc, Tc, w, R, P, Tmin);
 
-/// Peng-Robinson Vapor Pressure Calculation.
+/// Schmidt-Wenzel Vapor Pressure Calculation.
 	PvapSW = pvapsw.Pvap_Calc(n, Pc, Tc, w, R, P, Tmin);
 
 if (enter==1)
@@ -87,13 +89,16 @@ if (enter==0)
 	cout<<"\n"<<line<<"Enter with exp. Temperature file's name: ";
 	string Texp;
 	getline(cin, Texp);
-	ifstream Tin (Texp.c_str ());
+	string path;
+	path = "..\\compostos\\" + Texp;
+	ifstream Tin (path.c_str ());
 	Tin>>Tvapexp;
 	
 	cout<<"\n"<<line<<"Enter with exp. Pressure file's name: ";
 	string Pexp;
 	getline(cin, Pexp);
-	ifstream Pin (Pexp.c_str ());
+	path = "..\\compostos\\" + Pexp;
+	ifstream Pin (path.c_str ());
 	Pin>>Pvapexp;
 	
 	int n_exp = Tvapexp.size()-1;

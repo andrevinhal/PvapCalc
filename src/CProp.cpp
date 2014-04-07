@@ -89,7 +89,9 @@ void CProp::Pfile(int &_n, vector <double> &_Tvap,
 {	string foexp;
 	cout <<"\nEnter with vapor pressure output file's name: ";
 	getline(cin,foexp);
-	ofstream fout(foexp.c_str ());
+	string path;
+	path = "..\\resultados\\" + foexp;
+	ofstream fout(path.c_str ());
 	
 	fout<<"\nTemperature vs. Vapor Pressure for each EOS: "<< endl;
 	fout<<setw(5)<<"Tvap: "<<setw(10)<<"VdW Pvap: "<<setw(10)<<" RK Pvap: "<<
@@ -164,7 +166,9 @@ void CProp::Errfile(int &_n, std::vector <double> &_Tvap,
 {	string foerr;
 	cout <<"\nEnter with relative error output file's name: ";
 	getline(cin,foerr);
-	ofstream fouterr(foerr.c_str ());
+	string path;
+	path = "..\\resultados\\" + foerr;
+	ofstream fouterr(path.c_str ());
 		
 	fouterr<<"\nMax Relative Error (%) - Vapor Pressure: "<< endl;
 	fouterr<<setw(10)<<"VdW: "<<maxerrvdw<<setw(10)<<"RK : "<<maxerrrk<<setw(10)
