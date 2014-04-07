@@ -21,7 +21,7 @@ LogOutputEnabled=0
 OverrideOutput=0
 OverrideOutputName=Psat.exe
 HostApplication=
-Folders=
+Folders="Peng Robinson","Redlich Kwong","Schmidt Wenzel",Soave,"Van der Waals"
 CommandLine=
 UseCustomMakefile=0
 CustomMakefile=
@@ -63,7 +63,7 @@ BuildCmd=
 [Unit2]
 FileName=CEosVdW.h
 CompileCpp=1
-Folder=
+Folder=Van der Waals
 Compile=1
 Link=1
 Priority=1000
@@ -73,7 +73,7 @@ BuildCmd=
 [Unit3]
 FileName=CEosVdW.cpp
 CompileCpp=1
-Folder=
+Folder=Van der Waals
 Compile=1
 Link=1
 Priority=1000
@@ -83,7 +83,7 @@ BuildCmd=
 [Unit4]
 FileName=CEosRK.h
 CompileCpp=1
-Folder=
+Folder=Redlich Kwong
 Compile=1
 Link=1
 Priority=1000
@@ -93,7 +93,7 @@ BuildCmd=
 [Unit5]
 FileName=CEosRK.cpp
 CompileCpp=1
-Folder=
+Folder=Redlich Kwong
 Compile=1
 Link=1
 Priority=1000
@@ -103,7 +103,7 @@ BuildCmd=
 [Unit6]
 FileName=CFugVdW.h
 CompileCpp=1
-Folder=
+Folder=Van der Waals
 Compile=1
 Link=1
 Priority=1000
@@ -113,7 +113,7 @@ BuildCmd=
 [Unit7]
 FileName=CFugVdW.cpp
 CompileCpp=1
-Folder=
+Folder=Van der Waals
 Compile=1
 Link=1
 Priority=1000
@@ -123,7 +123,7 @@ BuildCmd=
 [Unit8]
 FileName=CFugRK.h
 CompileCpp=1
-Folder=
+Folder=Redlich Kwong
 Compile=1
 Link=1
 Priority=1000
@@ -133,7 +133,7 @@ BuildCmd=
 [Unit9]
 FileName=CFugRK.cpp
 CompileCpp=1
-Folder=
+Folder=Redlich Kwong
 Compile=1
 Link=1
 Priority=1000
@@ -143,7 +143,7 @@ BuildCmd=
 [Unit10]
 FileName=CEosSoave.h
 CompileCpp=1
-Folder=
+Folder=Soave
 Compile=1
 Link=1
 Priority=1000
@@ -153,7 +153,7 @@ BuildCmd=
 [Unit11]
 FileName=CEosSoave.cpp
 CompileCpp=1
-Folder=
+Folder=Soave
 Compile=1
 Link=1
 Priority=1000
@@ -163,7 +163,7 @@ BuildCmd=
 [Unit12]
 FileName=CFugSoave.h
 CompileCpp=1
-Folder=
+Folder=Soave
 Compile=1
 Link=1
 Priority=1000
@@ -173,7 +173,7 @@ BuildCmd=
 [Unit13]
 FileName=CFugSoave.cpp
 CompileCpp=1
-Folder=
+Folder=Soave
 Compile=1
 Link=1
 Priority=1000
@@ -183,7 +183,7 @@ BuildCmd=
 [Unit14]
 FileName=CEosPR.h
 CompileCpp=1
-Folder=
+Folder=Peng Robinson
 Compile=1
 Link=1
 Priority=1000
@@ -193,7 +193,7 @@ BuildCmd=
 [Unit15]
 FileName=CEosPR.cpp
 CompileCpp=1
-Folder=
+Folder=Peng Robinson
 Compile=1
 Link=1
 Priority=1000
@@ -203,7 +203,7 @@ BuildCmd=
 [Unit16]
 FileName=CFugPR.h
 CompileCpp=1
-Folder=
+Folder=Peng Robinson
 Compile=1
 Link=1
 Priority=1000
@@ -213,7 +213,7 @@ BuildCmd=
 [Unit17]
 FileName=CFugPR.cpp
 CompileCpp=1
-Folder=
+Folder=Peng Robinson
 Compile=1
 Link=1
 Priority=1000
@@ -223,7 +223,7 @@ BuildCmd=
 [Unit18]
 FileName=CGnuplot.cpp
 CompileCpp=1
-Folder=Psat
+Folder=
 Compile=1
 Link=1
 Priority=1000
@@ -233,7 +233,7 @@ BuildCmd=
 [Unit19]
 FileName=CPvapVdW.h
 CompileCpp=1
-Folder=
+Folder=Van der Waals
 Compile=1
 Link=1
 Priority=1000
@@ -243,7 +243,7 @@ BuildCmd=
 [Unit20]
 FileName=CPvapVdW.cpp
 CompileCpp=1
-Folder=
+Folder=Van der Waals
 Compile=1
 Link=1
 Priority=1000
@@ -253,7 +253,7 @@ BuildCmd=
 [Unit21]
 FileName=CPvapRK.h
 CompileCpp=1
-Folder=
+Folder=Redlich Kwong
 Compile=1
 Link=1
 Priority=1000
@@ -263,7 +263,7 @@ BuildCmd=
 [Unit22]
 FileName=CPvapRK.cpp
 CompileCpp=1
-Folder=
+Folder=Redlich Kwong
 Compile=1
 Link=1
 Priority=1000
@@ -273,7 +273,7 @@ BuildCmd=
 [Unit23]
 FileName=CPvapSoave.h
 CompileCpp=1
-Folder=
+Folder=Soave
 Compile=1
 Link=1
 Priority=1000
@@ -283,7 +283,7 @@ BuildCmd=
 [Unit24]
 FileName=CPvapSoave.cpp
 CompileCpp=1
-Folder=
+Folder=Soave
 Compile=1
 Link=1
 Priority=1000
@@ -293,7 +293,7 @@ BuildCmd=
 [Unit25]
 FileName=CPvapPR.h
 CompileCpp=1
-Folder=
+Folder=Peng Robinson
 Compile=1
 Link=1
 Priority=1000
@@ -303,7 +303,7 @@ BuildCmd=
 [Unit26]
 FileName=CPvapPR.cpp
 CompileCpp=1
-Folder=
+Folder=Peng Robinson
 Compile=1
 Link=1
 Priority=1000
@@ -333,7 +333,7 @@ BuildCmd=
 [Unit29]
 FileName=CNewtonMet.cpp
 CompileCpp=1
-Folder=Psat
+Folder=
 Compile=1
 Link=1
 Priority=1000
@@ -343,7 +343,7 @@ BuildCmd=
 [Unit30]
 FileName=CNewtonMet.h
 CompileCpp=1
-Folder=Psat
+Folder=
 Compile=1
 Link=1
 Priority=1000
@@ -353,7 +353,7 @@ BuildCmd=
 [Unit31]
 FileName=CProp.cpp
 CompileCpp=1
-Folder=Psat
+Folder=
 Compile=1
 Link=1
 Priority=1000
@@ -363,7 +363,7 @@ BuildCmd=
 [Unit32]
 FileName=CProp.h
 CompileCpp=1
-Folder=Psat
+Folder=
 Compile=1
 Link=1
 Priority=1000
@@ -373,7 +373,7 @@ BuildCmd=
 [Unit33]
 FileName=CSimulatorPvap.cpp
 CompileCpp=1
-Folder=Psat
+Folder=
 Compile=1
 Link=1
 Priority=1000
@@ -383,7 +383,7 @@ BuildCmd=
 [Unit34]
 FileName=CSimulatorPvap.h
 CompileCpp=1
-Folder=Psat
+Folder=
 Compile=1
 Link=1
 Priority=1000
@@ -393,7 +393,7 @@ BuildCmd=
 [Unit35]
 FileName=CEosSW.h
 CompileCpp=1
-Folder=
+Folder=Schmidt Wenzel
 Compile=1
 Link=1
 Priority=1000
@@ -403,7 +403,7 @@ BuildCmd=
 [Unit36]
 FileName=CEosSW.cpp
 CompileCpp=1
-Folder=
+Folder=Schmidt Wenzel
 Compile=1
 Link=1
 Priority=1000
@@ -413,7 +413,7 @@ BuildCmd=
 [Unit37]
 FileName=CFugSW.h
 CompileCpp=1
-Folder=
+Folder=Schmidt Wenzel
 Compile=1
 Link=1
 Priority=1000
@@ -423,7 +423,7 @@ BuildCmd=
 [Unit38]
 FileName=CFugSW.cpp
 CompileCpp=1
-Folder=
+Folder=Schmidt Wenzel
 Compile=1
 Link=1
 Priority=1000
@@ -433,7 +433,7 @@ BuildCmd=
 [Unit39]
 FileName=CPvapSW.h
 CompileCpp=1
-Folder=
+Folder=Schmidt Wenzel
 Compile=1
 Link=1
 Priority=1000
@@ -443,7 +443,7 @@ BuildCmd=
 [Unit40]
 FileName=CPvapSW.cpp
 CompileCpp=1
-Folder=
+Folder=Schmidt Wenzel
 Compile=1
 Link=1
 Priority=1000
