@@ -1,5 +1,6 @@
 *.o
 *.exe
+*.out
 /html
 /latex
 2
