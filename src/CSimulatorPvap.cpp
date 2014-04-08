@@ -52,17 +52,25 @@ double const R = 83.14; ///< universal gas constant definition
 	pvapvdw = new CPvapVdW(Tc, Pc);
 	PvapVdW=pvapvdw->Pvap_Calc(n, Pc, Tc, R, P, Tmin);
 
-/// Redlich-Kwong Vapor Pressure Calculation.
-	//PvapRK=pvaprk.Pvap_Calc(n, Pc, Tc, R, P, Tmin);
-	
-/// Soave-Redlich-Kwong Vapor Pressure Calculation.
-//	PvapSoave=pvapsoave.Pvap_Calc(n, Pc, Tc, w, R, P, Tmin);
-
-/// Peng-Robinson Vapor Pressure Calculation.
-//	PvapPR = pvappr.Pvap_Calc(n, Pc, Tc, w, R, P, Tmin);
-
-/// Schmidt-Wenzel Vapor Pressure Calculation.
-//	PvapSW = pvapsw.Pvap_Calc(n, Pc, Tc, w, R, P, Tmin);
+///// Redlich-Kwong Vapor Pressure Calculation.
+//	pvaprk = new CPvapRK(Tc, Pc);
+//	PvapRK=pvaprk->Pvap_Calc(n, Pc, Tc, R, P, Tmin);
+//	//PvapRK=pvaprk.Pvap_Calc(n, Pc, Tc, R, P, Tmin);
+//	
+///// Soave-Redlich-Kwong Vapor Pressure Calculation.
+//	pvapsoave = new CPvapSoave(Tc, Pc);
+//	PvapSoave = pvapsoave->Pvap_Calc(n, Pc, Tc, R, P, Tmin);
+//	//PvapSoave=pvapsoave.Pvap_Calc(n, Pc, Tc, w, R, P, Tmin);
+//
+///// Peng-Robinson Vapor Pressure Calculation.
+//	pvappr = new CPvapPR(Tc, Pc);
+//	PvapPR = pvappr->Pvap_Calc(n, Pc, Tc, R, P, Tmin);
+////	PvapPR = pvappr.Pvap_Calc(n, Pc, Tc, w, R, P, Tmin);
+//
+///// Schmidt-Wenzel Vapor Pressure Calculation.
+//	pvapsw = new CPvapSW(Tc, Pc);
+//	PvapSW = pvapsw->Pvap_Calc(n, Pc, Tc, R, P, Tmin);
+////	PvapSW = pvapsw.Pvap_Calc(n, Pc, Tc, w, R, P, Tmin);
 
 if (enter==1)
 {

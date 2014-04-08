@@ -10,11 +10,18 @@
 class CEosPR : public CEosSoave
 {
 public:
-//	void Const_a(double aT, double Tc, double Pc, double const R); ///< Method for "a" estimation
-//	void Const_b(double Tc, double Pc, double const R); ///< Method for "b" estimation
-//	void Const_aT(double w, double T, double Tc); ///< Method for "aT" estimation
-//	void Alpha (double B); ///< Method for "alpha" estimation
-//	void Beta (double A, double B); ///< Method for "beta" estimation
-//	void Gamma (double A, double B); ///< Method for "gamma" estimation
+	void Set_a_b(double Tc, double Pc); ///< method for calculating "a" and "b" PR's parameters
+			
+	double Const_aT(double w, double T, double Tc); ///< method for calculating "aT"
+	
+	double Alpha (double B); ///< Method for "alpha" estimation
+	double Beta (double A, double B); ///< Method for "beta" estimation
+	double Gamma (double A, double B); ///< Method for "gamma" estimation
+		
+/// Class Constructor.
+	CEosPR();
+
+/// Class Destructor.	
+	~CEosPR(){};
 };
 #endif // CEOSPR_H

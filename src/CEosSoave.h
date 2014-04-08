@@ -9,14 +9,22 @@
 
 class CEosSoave : public CEosRK
 {
-//protected:
-//	double const_aT; ///< EOS parameter "aT"
-//	
-//public:
-//	void Const_a(double aT, double Tc, double Pc, double const R); ///< method for calculating "a"
-//	void Const_A(double a, double T, double P, double R);///< method for calculating "A"
-//	void Const_aT(double w, double T, double Tc); ///< method for calculating "alpha"
-//	double Get_aT(){ return const_aT;}; ///< return "aT" 
+protected:
+	//double const_aT; ///< EOS parameter "aT"
+	double w; ///< acentric factor
+	
+public:
+	void Set_a_b(double Tc, double Pc); ///< method for calculating "a" and "b" Soave's parameters
+			
+	double Const_aT(double w, double T, double Tc); ///< method for calculating "aT"
+	double Const_A(double aT, double T, double P); ///< method for calculating "A"
+		
+/// Class Constructor.
+	CEosSoave();
+
+/// Class Destructor.	
+	~CEosSoave(){};
+
 };
 #endif // CEOSSOAVE_H
 

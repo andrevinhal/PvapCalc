@@ -8,15 +8,14 @@ CPvapVdW::CPvapVdW(double Tc, double Pc) {
 
 /// This method calculates the Vapor Pressure of a substance using vdW's EoS.
 vector<double> CPvapVdW::Pvap_Calc(int n, double Pc, double Tc, double const R, double P, double T) {
+	
+	double aT, A, B, alpha, beta, gamma;
+		
 	for (int i=0; i<=n; i++) {
 	/// Pressure iteration.
 		while ((control>0.0001) && (cont < maxiter)) {
+	
 	/// VdW Parameters Calculation.	
-			//vdweos.Const_a(Tc, Pc, R);	///< vdw constant a
-			//vdweos.Const_b(Tc, Pc, R);	///< vdw constant b
-			//a = vdweos.Get_a();
-			//b = vdweos.Get_b();
-		
 			A = vdweos.Const_A(T, P);	///< vdw constant A
 			B = vdweos.Const_B(T, P);	///< vdw constant B
 		
@@ -24,7 +23,7 @@ vector<double> CPvapVdW::Pvap_Calc(int n, double Pc, double Tc, double const R, 
 			beta = vdweos.Beta(A);		///< vdw constant Beta
 			gamma = vdweos.Gamma(A,B);	///< vdw constant Gamma
 		
-		/// VdW Fugacity Calculation.
+	/// VdW Fugacity Calculation.
 			ig=(vdweos.Get_b()*P)/(R*T);	///< initial guess
 		
 			solver.Z_Calc(alpha, beta, gamma, ig);	///< 3rd degree equation solver
@@ -43,11 +42,10 @@ vector<double> CPvapVdW::Pvap_Calc(int n, double Pc, double Tc, double const R, 
 		
 			cont++;
 		}
-		Pvap = P;	///< Vapor pressure
-		Pf.push_back(Pvap); ///< Vapor pressure vector
-		T++; ///<increasing temperature
-		cont=0;	maxiter=100; control=1; ///< reinitializing iteration variables
+	Pvap = P;	///< Vapor pressure
+	Pf.push_back(Pvap); ///< Vapor pressure vector
+	T++; ///<increasing temperature
+	cont=0;	maxiter=100; control=1; ///< reinitializing iteration variables
 	}
-	return Pf;
+return Pf;
 }
-

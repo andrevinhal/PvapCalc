@@ -18,13 +18,6 @@ protected:
 	CNewtonMet solver; ///< Object for solving 3rd degree equation 
 	
 	double R;
-	//double a; ///< parameter "a"
-	//double b; ///< parameter "b" 
-	double A; ///< parameter "A" 
-	double B; ///< parameter "B" 
-	double alpha; ///< parameter "alpha" 
-	double beta; ///< parameter "beta" 
-	double gamma; ///< parameter "gamma" 
 	double ig; ///< initial guess 
 	double zl; ///< liq. comp. factor 
 	double zv; ///< vap. comp. factor
@@ -44,7 +37,7 @@ public:
 
 /// Class Constructor.
 	CPvapVdW()
-	{cont=0;maxiter=100;control=1.0;A=0;B=0;alpha=0;beta=0;gamma=0;ig=0;zl=0;zv=0;fv=0;fl=0;Pvap=0; R=83.14;};
+	{cont=0;maxiter=100;control=1.0;ig=0;zl=0;zv=0;fv=0;fl=0;Pvap=0; R=83.14;};
 	
 	CPvapVdW(double Tc, double Pc);
 
